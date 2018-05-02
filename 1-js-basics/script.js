@@ -1,22 +1,34 @@
-var agePersonOne = 25;
-var agePersonTwo = 23;
-var agePersonThree = 27;
+// FUNCTION
 
-var heightPersonOne = 170;
-var heightPersonTwo = 175;
-var heightPersonThree = 172;
+// Example I
 
-
-var scorePersonOne = (agePersonOne * 5) + heightPersonOne;
-var scorePersonTwo = (agePersonTwo * 5) + heightPersonTwo;
-var scorePersonThree = (agePersonThree * 5) + heightPersonThree;
-
-if ( scorePersonOne > scorePersonTwo && scorePersonOne > scorePersonThree ) {
-    console.log('Person One is the winner with score ' + scorePersonOne);
-} else if ( scorePersonTwo > scorePersonOne && scorePersonTwo > scorePersonThree ) {
-    console.log('Person Two is the winner with score ' + scorePersonTwo);
-} else if ( scorePersonThree > scorePersonOne && scorePersonThree > scorePersonTwo ) {
-    console.log('Person Three is the winner with score ' + scorePersonThree);
-} else {
-    console.log('It\'s a draw');
+function calculateAge(yearOfBirth) {
+    var age = 2016 - yearOfBirth;
+    return age;
 }
+
+var ageOfJohn = calculateAge(1990);
+var ageOfMike = calculateAge(1969);
+var ageOfMarry = calculateAge(1948);
+
+// console.log(ageOfMarry);
+
+
+
+
+// Example II
+
+function yearsToRetirement(name, year) {
+    var age = calculateAge(year);
+    var retirement = 65 - age ;
+
+    if (retirement >= 0) {
+        console.log(`${name} will be retired in ${retirement} years.`);        
+    } else {
+        console.log(`${name} has already retired`);        
+    }
+}
+
+yearsToRetirement('John', 1990);
+yearsToRetirement('Mike', 1969);
+yearsToRetirement('Marry', 1948);
