@@ -1,37 +1,38 @@
-// Arrays
+// First way of creating an object
+var john = {
+    firstName : 'John',
+    lastName : 'Smith',
+    yearofBirth : 1990,
+    job: 'teacher',
+    isMarried: false
+}
 
-var names = ['John', 'Jane', 'Marry'];
-var years = new Array(1990, 1969, 1948);
+console.log(john);
 
-console.log(names);
+console.log(john.lastName);
+console.log(john['lastName']);
 
-console.log(names[1]);
+var xyz = 'job';
+console.log(john[xyz]);
 
-names[1] = 'Ben';
-console.log(names);
-
-
-
-
-var john = ['John', 'Smith', 1990, 'designer', false];
-
-// Push function
-john.push('blue');
-
-// Unshift function
-john.unshift('Mr.');
-
-// Pop function
-john.pop();
-
-// Shift function
-john.shift();
+john.lastName = 'Miller';
+john['job'] = 'programmer';
 
 console.log(john);
 
 
 
-// indexOf 
-if (john.indexOf('teacher') === -1) {
-    console.log('John is NOT a teacher');
-}
+
+
+
+// Second way of creating an object
+
+var jane = new Object();
+
+jane.name = 'Jane';
+jane.lastName = 'Smith';
+jane['yearOfBirth'] = 1969;
+jane['job'] = 'retired';
+jane['isMarried'] = true;
+
+console.log(jane);
