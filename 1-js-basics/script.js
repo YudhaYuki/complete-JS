@@ -1,20 +1,21 @@
-// Objects and methods
+// LOOPS
 
-/*
-var john = {
-    firstName : 'John',
-    lastName : 'Smith',
-    yearofBirth : 1990,
-    job: 'teacher',
-    isMarried: false,
-    family: ['Jane', 'Mark', 'Bob'],
-    calculateAge : function(yearOfBirth) {
-        return 2016 - yearOfBirth;
-    }
+// FOR LOOP
+for (var i = 0; i <= 5; i++) {
+    console.log(i);
 }
 
-console.log(john.family[2]);
-console.log(john.calculateAge(1990));
+var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
+
+
+for (var i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
+
+/*
+for (var i = names.length - 1; i >= 0; i--) {
+    console.log(names[i]);
+}
 */
 
 
@@ -25,63 +26,33 @@ console.log(john.calculateAge(1990));
 
 
 
-// Using THIS Method
 
-// Version 1
-/*
-var john = {
-    firstName : 'John',
-    lastName : 'Smith',
-    yearOfBirth : 1990,
-    job: 'teacher',
-    isMarried: false,
-    family: ['Jane', 'Mark', 'Bob'],
-    calculateAge : function() {
-        return 2016 - this.yearOfBirth;
+
+
+// WHILE LOOP
+
+var i = 0;
+while (i < names.length) {
+    console.log(names[i]);
+    i++;
+}
+
+
+for (var i = 1; i <= 5; i++) {
+    console.log(i);
+
+    if (i === 3) {
+        break;
     }
 }
 
-console.log(john.calculateAge());
 
-var age = john.calculateAge();
-john.age = age;
+for (var i = 1; i <= 5; i++) {
 
-console.log(john);
-
-*/
-
-
-
-// Version 2
-
-var john = {
-    firstName : 'John',
-    lastName : 'Smith',
-    yearOfBirth : 1990,
-    job: 'teacher',
-    isMarried: false,
-    family: ['Jane', 'Mark', 'Bob'],
-    calculateAge : function() {
-        this.age = 2016 - this.yearOfBirth;
+    if (i === 3) {
+        continue;
     }
-};
 
-
-john.calculateAge();
-console.log(john);
-
-
-
-
-var mike = {
-    firstName : 'Mike',
-    yearOfBirth : 1980,
-    calculateAge : function() {
-        this.age = 2016 - this.yearOfBirth;
-    }
-};
-
-
-mike.calculateAge();
-console.log(mike);
-
+    console.log(i);
+    
+}
