@@ -63,7 +63,7 @@ console.log(age);
 
 // First scoping example
 
-
+/*
 var a = 'Hello!';
 first();
 
@@ -76,13 +76,14 @@ function first() {
         console.log(a + b + c);
     }
 }
+*/
 
 
 
 
 // Example to show the differece between execution stack and scope chain
 
-/*
+
 var a = 'Hello!';
 first();
 
@@ -98,9 +99,10 @@ function first() {
 
 function third() {
     var d = 'John';
-    console.log(a + b + c + d);
+    // console.log(a + b + c + d);
+    console.log(a+d);
 }
-*/
+
 
 
 
